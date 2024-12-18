@@ -1,22 +1,21 @@
+# Microsoft Fabric Project
 
-Final-Project-Transforming-and-Analyzing-Data-with-SQL
-
-Project/Goals
-
-...
-
-Process
+## Project/Goals
 
 ...
 
-Results
+## Process
 
 ...
 
-Challenges
+## Results
 
 ...
 
-Future Goals
+## Challenges
+
+...
+
+## Future Goals
 
 ...
