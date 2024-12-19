@@ -8,7 +8,7 @@ My project is to test Microsoft Fabric using sample data for uploading, cleaning
 ## Process
 1. Create a Workspace - The place for collaboration to create files, such as lakehouses, warehouses, reports, and task flows, with different levels of permissions and management.
 
-2. Create a Lakehouse - The storage of data in a single location to handle high volume of data in various datasets (e.g., Delimited Text, JSON, Parquet).
+2. Create a Lakehouse - The storage of data in a single location to handle high volumes of data in different data formats (e.g., CSV, JSON, Parquet).
 
 3. Create a Warehouse - 
 
