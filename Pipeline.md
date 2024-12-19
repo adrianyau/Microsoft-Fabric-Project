@@ -13,6 +13,8 @@
    - Stores
    - Transactions 1997
    - Transactions 1998
+  
+For each activity under 'Name', type 'Copy (respective File Name)'.  Make sure that the 'Activity State' is selected as 'Activated'.
 <img width="1440" alt="Screenshot 2024-12-19 at 9 25 13 AM" src="https://github.com/user-attachments/assets/fdab596a-2386-46e0-b45a-04f351daaade" />
 
 <img width="1371" alt="Screenshot 2024-12-19 at 9 27 08 AM" src="https://github.com/user-attachments/assets/550c333b-9c7b-4c9a-af72-9c033c108b85" />
