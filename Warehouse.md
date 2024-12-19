@@ -25,14 +25,17 @@ CREATE schema mavenmarket;
     YEAR(date) AS year
    FROM mavenmarket.calendar
 ```
-date	start_of_week	name_of_day	start_of_month	name_of_month	quarter_of_year	year
-1997-01-01	1996-12-29	Wednesday	1997-01-01	January	Q1	1997
-1997-01-02	1996-12-29	Thursday	1997-01-01	January	Q1	1997
-1997-01-03	1996-12-29	Friday	1997-01-01	January	Q1	1997
-1997-01-04	1996-12-29	Saturday	1997-01-01	January	Q1	1997
-1997-01-05	1997-01-05	Sunday	1997-01-01	January	Q1	1997
-1997-01-06	1997-01-05	Monday	1997-01-01	January	Q1	1997
-1997-01-07	1997-01-05	Tuesday	1997-01-01	January	Q1	1997
-1997-01-08	1997-01-05	Wednesday	1997-01-01	January	Q1	1997
-1997-01-09	1997-01-05	Thursday	1997-01-01	January	Q1	1997
-1997-01-10	1997-01-05	Friday	1997-01-01	January	Q1	1997
+|date      |start_of_week|name_of_day|start_of_month|name_of_month|quarter_of_year|year|
+|----------|-------------|-----------|--------------|-------------|---------------|----|
+|1997-01-01|1996-12-29   |Wednesday  |1997-01-01    |January      |Q1             |1997|
+|1997-01-02|1996-12-29   |Thursday   |1997-01-01    |January      |Q1             |1997|
+|1997-01-03|1996-12-29   |Friday     |1997-01-01    |January      |Q1             |1997|
+|1997-01-04|1996-12-29   |Saturday   |1997-01-01    |January      |Q1             |1997|
+|1997-01-05|1997-01-05   |Sunday     |1997-01-01    |January      |Q1             |1997|
+|1997-01-06|1997-01-05   |Monday     |1997-01-01    |January      |Q1             |1997|
+|1997-01-07|1997-01-05   |Tuesday    |1997-01-01    |January      |Q1             |1997|
+|1997-01-08|1997-01-05   |Wednesday  |1997-01-01    |January      |Q1             |1997|
+|1997-01-09|1997-01-05   |Thursday   |1997-01-01    |January      |Q1             |1997|
+|1997-01-10|1997-01-05   |Friday     |1997-01-01    |January      |Q1             |1997|
+
+
