@@ -14,16 +14,17 @@ CREATE schema mavenmarket;
 
 4. Select 'New SQL query' to make queries for each table.
 
+# Calendar
 ```sql
-   SELECT TOP 10
-    CAST(date AS date) AS date, 
-    CAST(DATEADD(day, -DATEDIFF(day, -1, date) % 7, date) AS date) AS start_of_week,
-    CAST(DATENAME(weekday, date) AS varchar(30)) AS name_of_day,
-    CAST(DATEADD(month, DATEDIFF(month, 0, date), 0) AS date) AS start_of_month, 
-    CAST(DATENAME(month, date) AS varchar(30)) AS name_of_month, 
-    CONCAT('Q',DATEPART(quarter, date)) AS quarter_of_year, 
-    YEAR(date) AS year
-   FROM mavenmarket.calendar
+SELECT TOP 10
+   CAST(date AS date) AS date, 
+   CAST(DATEADD(day, -DATEDIFF(day, -1, date) % 7, date) AS date) AS start_of_week,
+   CAST(DATENAME(weekday, date) AS varchar(30)) AS name_of_day,
+   CAST(DATEADD(month, DATEDIFF(month, 0, date), 0) AS date) AS start_of_month, 
+   CAST(DATENAME(month, date) AS varchar(30)) AS name_of_month, 
+   CONCAT('Q',DATEPART(quarter, date)) AS quarter_of_year, 
+   YEAR(date) AS year
+FROM mavenmarket.calendar
 ```
 |date      |start_of_week|name_of_day|start_of_month|name_of_month|quarter_of_year|year|
 |----------|-------------|-----------|--------------|-------------|---------------|----|
@@ -39,3 +40,44 @@ CREATE schema mavenmarket;
 |1997-01-10|1997-01-05   |Friday     |1997-01-01    |January      |Q1             |1997|
 
 
+# Customers
+```sql
+SELECT TOP 10
+    CAST(customer_id AS NUMERIC) AS customer_id,
+    customer_acct_num,
+    CONCAT(first_name,' ', last_name) AS full_name,
+    customer_address,
+    customer_city,
+    customer_state_province,
+    customer_postal_code,
+    customer_country,
+    CAST(birthdate AS DATE) AS birthdate,
+    YEAR(birthdate) AS birth_year,
+    marital_status,
+    yearly_income,
+    gender,
+    total_children,
+    CASE
+        WHEN total_children > 0 THEN 'Y'
+        ELSE 'N'
+        END has_children,
+    num_children_at_home,
+    education,
+    CAST(acct_open_date AS DATE) AS acct_open_date,
+    member_card,
+    occupation,
+    homeowner
+FROM mavenmarket.customers
+```
+|customer_id|customer_acct_num|full_name|customer_address|customer_city|customer_state_province|customer_postal_code|customer_country|birthdate |birth_year|marital_status|yearly_income|gender|total_children|has_children|num_children_at_home|education          |acct_open_date|member_card|occupation    |homeowner|
+|-----------|-----------------|---------|----------------|-------------|-----------------------|--------------------|----------------|----------|----------|--------------|-------------|------|--------------|------------|--------------------|-------------------|--------------|-----------|--------------|---------|
+|35         |87771052718      |Ed Young |Rt. 470 Box A   |Merida       |Yucatan                |69940               |Mexico          |1920-04-17|1920      |M             |$30K - $50K  |M     |5             |Y           |1                   |Partial College    |1992-09-21    |Bronze     |Skilled Manual|Y        |
+|1447       |13038234700      |Anthony Ghysels|8964 Dumbarton Street|La Cruz      |Sinaloa                |70672               |Mexico          |1952-11-23|1952      |M             |$70K - $90K  |M     |1             |Y           |1                   |Bachelors Degree   |1990-07-10    |Bronze     |Professional  |Y        |
+|2094       |17556732296      |Nancy Moreno|9233 Pepperidge Way|Acapulco     |Guerrero               |70849               |Mexico          |1945-07-17|1945      |M             |$90K - $110K |F     |2             |Y           |1                   |Partial High School|1994-03-26    |Bronze     |Management    |Y        |
+|2433       |20083099603      |Moyie Cortese|7544 Olivera Rd.|La Cruz      |Sinaloa                |25454               |Mexico          |1928-08-12|1928      |M             |$30K - $50K  |M     |1             |Y           |1                   |High School Degree |1994-02-14    |Bronze     |Skilled Manual|Y        |
+|2974       |23905108000      |Lorraine Ardell|5404 Panoramic Ave|Acapulco     |Guerrero               |93738               |Mexico          |1947-06-12|1947      |M             |$30K - $50K  |M     |1             |Y           |1                   |High School Degree |1992-01-04    |Bronze     |Skilled Manual|N        |
+|3032       |24360541701      |Betty Tobias|5439 McElroy Court|Acapulco     |Guerrero               |39825               |Mexico          |1970-05-20|1970      |M             |$30K - $50K  |F     |2             |Y           |1                   |High School Degree |1994-08-27    |Bronze     |Skilled Manual|Y        |
+|4531       |35667871236      |Anatole Sisk|1463 Lincoln Dr |Acapulco     |Guerrero               |47599               |Mexico          |1976-09-09|1976      |M             |$90K - $110K |M     |1             |Y           |1                   |Bachelors Degree   |1994-04-06    |Bronze     |Management    |Y        |
+|5481       |42885159300      |Linda Brown|3229 Mark Twain Dr.|Merida       |Yucatan                |16241               |Mexico          |1958-06-17|1958      |M             |$30K - $50K  |F     |4             |Y           |1                   |High School Degree |1993-04-22    |Bronze     |Skilled Manual|Y        |
+|6603       |52399458885      |Colleen Bowen|4350 Laguna St  |Merida       |Yucatan                |58352               |Mexico          |1919-05-02|1919      |M             |$30K - $50K  |F     |5             |Y           |1                   |High School Degree |1992-03-06    |Bronze     |Manual        |N        |
+|7745       |62001209259      |Douglas Jegier|5979 Leisure Lane|Acapulco     |Guerrero               |73201               |Mexico          |1911-01-08|1911      |M             |$30K - $50K  |M     |2             |Y           |1                   |High School Degree |1990-04-26    |Bronze     |Manual        |Y        |
