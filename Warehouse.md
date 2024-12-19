@@ -206,5 +206,24 @@ FROM mavenmarket.stores
 |10        |24        |Supermarket|Store 10  |7894 Rotherham Dr        |Orizaba      |Veracruz   |Mexico       |Orizaba, Veracruz, Mexico   |212-555-4774|212      |1979-04-13       |1982-01-30       |34791     |26354       |
 
 
+##### Transactions
 
+``` sql
+CREATE TABLE [MavenMarket_Warehouse].[mavenmarket_v1].[transactions] AS
+        (SELECT *
+FROM mavenmarket_transactions_1997
+UNION ALL
+SELECT *
+FROM mavenmarket_transactions_1998)
+
+
+SELECT
+    CAST(transaction_date AS DATE) AS transaction_date,
+    CAST(stock_date AS DATE) AS stock_date,
+    CAST(product_id AS NUMERIC) AS product_id,
+    CAST(customer_id AS NUMERIC) AS customer_id,
+    CAST(store_id AS NUMERIC) AS store_id,
+    CAST(quantity AS NUMERIC) AS quantity
+FROM  mavenmarket.transactions
+```
 
