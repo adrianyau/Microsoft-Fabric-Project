@@ -8,19 +8,19 @@ My project is to test Microsoft Fabric using sample data for uploading, cleaning
 ## Process
 1. Create a Workspace - The place for collaboration to create files, such as lakehouses, warehouses, reports, and task flows, with different levels of permissions and management.
 
-2. Create a Lakehouse - The storage of data in a single location to handle high volumes of data in different data formats (e.g., CSV, JSON, Parquet).
+2. Create a Lakehouse - The storage of data in a single location to handle high volumes of unstructured data in different data formats (e.g., CSV, JSON, Parquet).
 
 3. Create a Warehouse - 
 
-4. Create a Pipeline -
+4. Create a Pipeline - The process of extracting, transforming, and loading (ETL) data from the Lakehouse to Warehouse for queries.
 
-5. Clean and Transform Data -
+5. Clean and Transform Data - T-SQL is used to interact with relational databases.
 
-6. Create Tables for Staging -
+6. Create Tables for Staging - The refinement of data tables to be used for presentation.
 
-7. Create Semantic Model Layout -
+7. Create Semantic Model Layout - The establishment of relationships between data model sets.
 
-8. Create Power BI Report - 
+8. Create Power BI Report - The visual analysis displayed for the audience.
 
 ## Results
 
