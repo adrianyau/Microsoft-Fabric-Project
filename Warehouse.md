@@ -14,7 +14,7 @@ CREATE schema mavenmarket;
 
 4. Select 'New SQL query' to make queries for each table.
 
-   ```sql
+```sql
    
    SELECT TOP 10
     CAST(date AS date) AS date, 
