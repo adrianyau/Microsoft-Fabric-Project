@@ -23,4 +23,5 @@ For each activity under 'Name', type 'Copy (respective File Name)'.  Make sure t
 5. Under 'Destination', select 'Connection' for the Warehouse created previously (MavenMarket_Warehouse). For the 'Table', make sure the schema is named from the schema created previously in the Warehouse (mavenmarket) and the table name is named after the respective files to be sent down the pipeline.
 <img width="1373" alt="Screenshot 2024-12-19 at 9 27 47 AM" src="https://github.com/user-attachments/assets/dd1e961a-ce96-4c2c-bca5-49c625b44f2a" />
 
+6. Click 'Validate' to see if there are any errors.  After, click 'Run'.  If there are no errors, the 'copy data' activities should be successful.
 <img width="1440" alt="Screenshot 2024-12-19 at 2 02 46 PM" src="https://github.com/user-attachments/assets/6166959c-7084-4649-9a0e-628199d70b9e" />
