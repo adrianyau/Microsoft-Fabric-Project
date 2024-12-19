@@ -10,7 +10,7 @@ My project is to test Microsoft Fabric using sample data for uploading, cleaning
 
 2. Create a Lakehouse - The storage of data in a single location from multiple files.
 
-3. Create a Warehouse - The consolidation of data to be queried for reporting.
+3. Create a Warehouse - The consolidation of data to be queried and optimized for reporting.
 
 4. Create a Pipeline - The process of extracting, transforming, and loading (ETL) data from the Lakehouse to Warehouse creating tables under a schema.
 
