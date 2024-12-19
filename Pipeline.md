@@ -4,6 +4,15 @@
 2. Click on 'Pipeline activity'.  Select 'Copy data'.
 <img width="1440" alt="Screenshot 2024-12-19 at 9 25 50 AM" src="https://github.com/user-attachments/assets/bfc57aad-1734-4b23-95fd-aa86df0f7cd5" />
 
+3. At the pipeline canvas area, the 'copy data' activity is created.  Click on the 'copy data' activity and select 'clone' to make seven 'copy data' activities for the following files to be ingested:
+   - Calendar
+   - Customers
+   - Products
+   - Regions
+   - Returns
+   - Stores
+   - Transactions 1997
+   - Transactions 1998
 <img width="1440" alt="Screenshot 2024-12-19 at 9 25 13 AM" src="https://github.com/user-attachments/assets/fdab596a-2386-46e0-b45a-04f351daaade" />
 
 <img width="1371" alt="Screenshot 2024-12-19 at 9 27 08 AM" src="https://github.com/user-attachments/assets/550c333b-9c7b-4c9a-af72-9c033c108b85" />
