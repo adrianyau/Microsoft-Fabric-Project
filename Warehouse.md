@@ -9,4 +9,5 @@ CREATE schema mavenmarket;
 
 <img width="1440" alt="Screenshot 2024-12-19 at 1 34 11 PM" src="https://github.com/user-attachments/assets/a7ca4ec6-2303-4ee6-93ac-1eaab2d2b532" />
 
+3. After running the Pipeline Activity, the tables should be uploaded under the 'mavenmarket' schema.
 <img width="1440" alt="Screenshot 2024-12-19 at 2 14 34 PM" src="https://github.com/user-attachments/assets/58957037-8c74-4daa-b41c-b9042d8b6a1e" />
