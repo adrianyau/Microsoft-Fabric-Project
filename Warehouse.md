@@ -11,3 +11,17 @@ CREATE schema mavenmarket;
 
 3. After running the Pipeline Activity, the tables should be uploaded under the 'mavenmarket' schema.
 <img width="1429" alt="Screenshot 2024-12-19 at 2 19 15 PM" src="https://github.com/user-attachments/assets/fe037d96-46c4-4471-8842-19d2a25d4c05" />
+
+4. Select 'New SQL query' to make queries for each table.
+
+   '''sql
+   SELECT TOP 10
+    CAST(date AS date) AS date, 
+    CAST(DATEADD(day, -DATEDIFF(day, -1, date) % 7, date) AS date) AS start_of_week,
+    CAST(DATENAME(weekday, date) AS varchar(30)) AS name_of_day,
+    CAST(DATEADD(month, DATEDIFF(month, 0, date), 0) AS date) AS start_of_month, 
+    CAST(DATENAME(month, date) AS varchar(30)) AS name_of_month, 
+    CONCAT('Q',DATEPART(quarter, date)) AS quarter_of_year, 
+    YEAR(date) AS year
+FROM mavenmarket.calendar
+```
