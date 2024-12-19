@@ -24,6 +24,6 @@ CREATE schema mavenmarket;
     CAST(DATENAME(month, date) AS varchar(30)) AS name_of_month, 
     CONCAT('Q',DATEPART(quarter, date)) AS quarter_of_year, 
     YEAR(date) AS year
-FROM mavenmarket.calendar
+   FROM mavenmarket.calendar
 
 ```
