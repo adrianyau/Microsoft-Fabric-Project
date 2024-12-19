@@ -14,7 +14,7 @@ CREATE schema mavenmarket;
 
 4. Select 'New SQL query' to make queries for each table.
 
-# Calendar
+### Calendar
 ```sql
 SELECT TOP 10
    CAST(date AS date) AS date, 
@@ -40,7 +40,7 @@ FROM mavenmarket.calendar
 |1997-01-10|1997-01-05   |Friday     |1997-01-01    |January      |Q1             |1997|
 
 
-# Customers
+### Customers
 ```sql
 SELECT TOP 10
     CAST(customer_id AS NUMERIC) AS customer_id,
