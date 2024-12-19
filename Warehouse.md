@@ -120,12 +120,91 @@ SELECT TOP 10
     sales_region
 FROM mavenmarket.regions
 ```
-|SELECT    |TOP       |10       |FIELD4    |FIELD5 |FIELD6|
-|----------|----------|---------|----------|-------|------|
-|          |CAST(region_id|AS       |NUMERIC)  |AS     |region_id,|
-|          |sales_district,|         |          |       |      |
-|          |sales_region|         |          |       |      |
-|FROM      |mavenmarket.regions|         |          |       |      |
+|region_id |sales_district|sales_region|
+|----------|--------------|------------|
+|1         |San Francisco |Central West|
+|2         |Mexico City   |Mexico Central|
+|3         |Los Angeles   |South West  |
+|4         |Guadalajara   |Mexico West |
+|5         |Vancouver     |Canada West |
+|6         |Victoria      |Canada West |
+|7         |San Diego     |South West  |
+|8         |San Diego     |South West  |
+|9         |San Diego     |South West  |
+|10        |San Diego     |South West  |
+
+
+##### Returns
+
+```sql
+SELECT TOP 10
+    CAST(return_date AS date) AS return_date,
+    CAST(product_id AS NUMERIC) AS product_id,
+    CAST(store_id AS NUMERIC) AS store_id,
+    CAST(quantity AS NUMERIC) AS quantity
+FROM mavenmarket.returns
+```
+|return_date|product_id|store_id |quantity|
+|-----------|----------|---------|--------|
+|1998-03-12 |180       |9        |2       |
+|1998-04-08 |1506      |9        |2       |
+|1998-04-09 |117       |9        |2       |
+|1998-05-13 |246       |9        |2       |
+|1998-05-14 |187       |9        |2       |
+|1998-07-30 |313       |9        |2       |
+|1998-07-30 |1488      |9        |2       |
+|1998-09-13 |936       |9        |2       |
+|1998-11-02 |135       |9        |2       |
+|1998-11-03 |1316      |9        |2       |
+
+
+##### Stores
+```sql
+SELECT TOP 10
+    CAST(store_id AS NUMERIC) AS store_id,
+    CAST(region_id AS NUMERIC) AS region_id,
+    store_type,
+    store_name,
+    store_street_address,
+    store_city,
+    store_state,
+    store_country,
+    CONCAT(store_city,', ', store_state,', ', store_country) AS full_address,
+    store_phone,
+    LEFT(store_phone, 3) AS area_code,
+    CAST(first_opened_date AS date) AS first_opened_date,
+    CAST(last_remodel_date AS date) AS last_remodel_date,
+    CAST(total_sqft AS numeric) AS total_sqft,
+    CAST(grocery_sqft AS numeric) AS grocery_sqft
+FROM mavenmarket.stores
+
+
+
+
+SELECT CAST(store_id AS NUMERIC) AS store_id, CAST(region_id AS NUMERIC) AS region_id
+FROM mavenmarket.stores
+
+
+SELECT CONCAT(store_city,', ', store_state,', ', store_country) AS full_address
+FROM mavenmarket.stores
+
+
+SELECT store_phone, LEFT(store_phone, 3) AS area_code
+FROM mavenmarket.stores
+```
+|store_id  |region_id |store_type|store_name|store_street_address     |store_city   |store_state|store_country|full_address                |store_phone |area_code|first_opened_date|last_remodel_date|total_sqft|grocery_sqft|
+|----------|----------|----------|----------|-------------------------|-------------|-----------|-------------|----------------------------|------------|---------|-----------------|-----------------|----------|------------|
+|1         |28        |Supermarket|Store 1   |2853 Bailey Rd           |Acapulco     |Guerrero   |Mexico       |Acapulco, Guerrero, Mexico  |262-555-5124|262      |1982-01-09       |1990-12-05       |23593     |17475       |
+|2         |78        |Small Grocery|Store 2   |5203 Catanzaro Way       |Bellingham   |WA         |USA          |Bellingham, WA, USA         |605-555-8203|605      |1970-04-02       |1973-06-04       |28206     |22271       |
+|3         |76        |Supermarket|Store 3   |1501 Ramsey Circle       |Bremerton    |WA         |USA          |Bremerton, WA, USA          |509-555-1596|509      |1959-06-14       |1967-11-19       |39696     |24390       |
+|4         |27        |Gourmet Supermarket|Store 4   |433 St George Dr         |Camacho      |Zacatecas  |Mexico       |Camacho, Zacatecas, Mexico  |304-555-1474|304      |1994-09-27       |1995-12-01       |23759     |16844       |
+|5         |4         |Small Grocery|Store 5   |1250 Coggins Drive       |Guadalajara  |Jalisco    |Mexico       |Guadalajara, Jalisco, Mexico|801-555-4324|801      |1978-09-18       |1991-06-29       |24597     |15012       |
+|6         |47        |Gourmet Supermarket|Store 6   |5495 Mitchell Canyon Road|Beverly Hills|CA         |USA          |Beverly Hills, CA, USA      |958-555-5002|958      |1981-01-03       |1991-03-13       |23688     |15337       |
+|7         |3         |Supermarket|Store 7   |1077 Wharf Drive         |Los Angeles  |CA         |USA          |Los Angeles, CA, USA        |477-555-7967|477      |1971-05-21       |1981-10-20       |23598     |14210       |
+|8         |26        |Deluxe Supermarket|Store 8   |3173 Buena Vista Ave     |Merida       |Yucatan    |Mexico       |Merida, Yucatan, Mexico     |797-555-3417|797      |1958-09-23       |1967-11-18       |30797     |20141       |
+|9         |2         |Mid-Size Grocery|Store 9   |1872 El Pintado Road     |Mexico City  |DF         |Mexico       |Mexico City, DF, Mexico     |439-555-3524|439      |1955-03-18       |1959-06-07       |36509     |22450       |
+|10        |24        |Supermarket|Store 10  |7894 Rotherham Dr        |Orizaba      |Veracruz   |Mexico       |Orizaba, Veracruz, Mexico   |212-555-4774|212      |1979-04-13       |1982-01-30       |34791     |26354       |
+
 
 
 
