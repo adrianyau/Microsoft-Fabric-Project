@@ -209,7 +209,7 @@ FROM mavenmarket.stores
 ##### Transactions
 
 ``` sql
-CREATE TABLE [MavenMarket_Warehouse].[mavenmarket_v1].[transactions] AS
+CREATE TABLE [MavenMarket_Warehouse].[mavenmarket_v1].[] AS
         (SELECT *
 FROM mavenmarket_transactions_1997
 UNION ALL
