@@ -14,7 +14,7 @@ CREATE schema mavenmarket;
 
 4. Select 'New SQL query' to make queries for each table.
 
-### Calendar
+##### Calendar
 ```sql
 SELECT TOP 10
    CAST(date AS date) AS date, 
@@ -40,7 +40,7 @@ FROM mavenmarket.calendar
 |1997-01-10|1997-01-05   |Friday     |1997-01-01    |January      |Q1             |1997|
 
 
-### Customers
+##### Customers
 ```sql
 SELECT TOP 10
     CAST(customer_id AS NUMERIC) AS customer_id,
@@ -81,3 +81,50 @@ FROM mavenmarket.customers
 |5481       |42885159300      |Linda Brown|3229 Mark Twain Dr.|Merida       |Yucatan                |16241               |Mexico          |1958-06-17|1958      |M             |$30K - $50K  |F     |4             |Y           |1                   |High School Degree |1993-04-22    |Bronze     |Skilled Manual|Y        |
 |6603       |52399458885      |Colleen Bowen|4350 Laguna St  |Merida       |Yucatan                |58352               |Mexico          |1919-05-02|1919      |M             |$30K - $50K  |F     |5             |Y           |1                   |High School Degree |1992-03-06    |Bronze     |Manual        |N        |
 |7745       |62001209259      |Douglas Jegier|5979 Leisure Lane|Acapulco     |Guerrero               |73201               |Mexico          |1911-01-08|1911      |M             |$30K - $50K  |M     |2             |Y           |1                   |High School Degree |1990-04-26    |Bronze     |Manual        |Y        |
+
+
+##### Products
+```sql
+SELECT TOP 10
+    CAST(product_id AS NUMERIC) AS product_id,
+    product_brand,
+    product_name,
+    product_sku,
+    CAST(product_retail_price AS FLOAT) AS product_retail_price,
+    ROUND(CAST(product_retail_price AS FLOAT) * 0.9, 2) AS discount_price,
+    CAST(product_cost AS FLOAT) AS product_cost,
+    CAST(product_weight AS FLOAT) AS product_weight,
+    COALESCE(recyclable, 0) AS recyclable,
+    COALESCE(low_fat, 0) AS low_fat
+FROM mavenmarket.products
+```
+|product_id|product_brand|product_name|product_sku|product_retail_price|discount_price|product_cost|product_weight|recyclable|low_fat|
+|----------|-------------|------------|-----------|--------------------|--------------|------------|--------------|----------|-------|
+|45        |Club         |Club Sour Cream|14866315722|0.53                |0.48          |0.25        |13.6          |0         |0      |
+|94        |Golden       |Golden Apple Cinnamon Waffles|16446555256|0.62                |0.56          |0.25        |7.9           |1         |0      |
+|144       |Denny        |Denny Glass Cleaner|67840190529|0.51                |0.46          |0.25        |20.3          |1         |0      |
+|147       |Denny        |Denny D-Size Batteries|52095012068|0.64                |0.58          |0.25        |13            |1         |0      |
+|384       |Moms         |Moms Sliced Turkey|49593787789|0.54                |0.49          |0.25        |14.7          |1         |1      |
+|596       |Landslide    |Landslide Hot Chocolate|69221592545|0.64                |0.58          |0.25        |10.4          |0         |1      |
+|651       |Bravo        |Bravo Chicken Ramen Soup|66987923979|0.8                 |0.72          |0.25        |15            |0         |1      |
+|709       |Imagine      |Imagine Frozen Sausage Pizza|47281391024|0.57                |0.51          |0.25        |16.9          |1         |1      |
+|769       |Cormorant    |Cormorant D-Size Batteries|96734759211|0.59                |0.53          |0.25        |21            |0         |0      |
+|784       |Cormorant    |Cormorant Large Sponge|69949565529|0.52                |0.47          |0.25        |8.17          |1         |0      |
+
+
+##### Regions
+```sql
+SELECT TOP 10
+    CAST(region_id AS NUMERIC) AS region_id,
+    sales_district,
+    sales_region
+FROM mavenmarket.regions
+```
+|SELECT    |TOP       |10       |FIELD4    |FIELD5 |FIELD6|
+|----------|----------|---------|----------|-------|------|
+|          |CAST(region_id|AS       |NUMERIC)  |AS     |region_id,|
+|          |sales_district,|         |          |       |      |
+|          |sales_region|         |          |       |      |
+|FROM      |mavenmarket.regions|         |          |       |      |
+
+
