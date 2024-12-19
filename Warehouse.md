@@ -9,4 +9,4 @@ CREATE schema mavenmarket;
 
 <img width="1440" alt="Screenshot 2024-12-19 at 1 34 11 PM" src="https://github.com/user-attachments/assets/a7ca4ec6-2303-4ee6-93ac-1eaab2d2b532" />
 
-<img width="1440" alt="Screenshot 2024-12-19 at 2 14 34 PM" src="https://github.com/user-attachments/assets/397c1805-2fe8-4944-ac2f-77fdf4ff4f38" />
+<img width="1440" alt="Screenshot 2024-12-19 at 2 14 34 PM" src="https://github.com/user-attachments/assets/58957037-8c74-4daa-b41c-b9042d8b6a1e" />
