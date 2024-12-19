@@ -15,6 +15,7 @@ CREATE schema mavenmarket;
 4. Select 'New SQL query' to make queries for each table.
 
    ```sql
+   
    SELECT TOP 10
     CAST(date AS date) AS date, 
     CAST(DATEADD(day, -DATEDIFF(day, -1, date) % 7, date) AS date) AS start_of_week,
@@ -24,4 +25,5 @@ CREATE schema mavenmarket;
     CONCAT('Q',DATEPART(quarter, date)) AS quarter_of_year, 
     YEAR(date) AS year
 FROM mavenmarket.calendar
+
 ```
