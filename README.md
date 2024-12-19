@@ -8,11 +8,11 @@ My project is to test Microsoft Fabric using sample data for uploading, cleaning
 ## Process
 1. Create a Workspace - The place for collaboration to create files, such as lakehouses, warehouses, reports, and task flows, with different levels of permissions and management.
 
-2. Create a Lakehouse - The storage of data in a single location to handle high volumes of unstructured data in different data formats (e.g., CSV, JSON, Parquet).
+2. Create a Lakehouse - The storage of data in a single location from multiple files.
 
-3. Create a Warehouse - 
+3. Create a Warehouse - The consolidation of data to be queried for reporting.
 
-4. Create a Pipeline - The process of extracting, transforming, and loading (ETL) data from the Lakehouse to Warehouse for queries.
+4. Create a Pipeline - The process of extracting, transforming, and loading (ETL) data from the Lakehouse to Warehouse creating tables under a schema.
 
 5. Clean and Transform Data - T-SQL is used to interact with relational databases.
 
