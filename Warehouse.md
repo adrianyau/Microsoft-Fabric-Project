@@ -226,6 +226,7 @@ SELECT
     CAST(quantity AS NUMERIC) AS quantity
 FROM  mavenmarket.transactions
 ```
+Top 5
 |transaction_date|stock_date|product_id|customer_id|store_id                 |quantity     |
 |----------------|----------|----------|-----------|-------------------------|-------------|
 |1997-01-05      |1997-01-03|1089      |4351       |23                       |6            |
@@ -234,6 +235,7 @@ FROM  mavenmarket.transactions
 |1997-05-21      |1997-05-20|8         |6376       |6                        |6            |
 |1997-07-12      |1997-07-08|580       |4351       |23                       |6            |
 
+Bottom 5
 |transaction_date|stock_date|product_id|customer_id|store_id                 |quantity     |
 |----------------|----------|----------|-----------|-------------------------|-------------|
 |1998-12-30      |1998-12-28|454       |3419       |10                       |5            |
