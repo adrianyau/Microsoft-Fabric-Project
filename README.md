@@ -27,9 +27,7 @@ My project is to test Microsoft Fabric using sample data for uploading, cleaning
 ...
 
 ## Challenges
-
-...
+- Microsoft Power BI in Microsoft Fabric has basic visual tools and filters in comparison to the desktop version of Microsoft Power BI.
 
 ## Future Goals
-
-...
+- Utilize the full capabilities of Microsoft Power BI Desktop to get DAX Measures and Map Visuals.
