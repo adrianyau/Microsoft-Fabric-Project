@@ -6,7 +6,7 @@ In 2023, Microsoft launched Microsoft Fabric, a new end-to-end data analytics pl
 My project is to test Microsoft Fabric using sample data for uploading, cleaning, transforming, and reporting.
 
 ## Process
-1. Create a Workspace - The place for collaboration to create files, such as lakehouses, warehouses, reports, and task flows, with different levels of permissions and management.
+1. Create a Workspace - The place for collaboration to create files, such as lakehouses, warehouses, reports, and task flows, with different levels of permissions and management access.
 
 2. Create a Lakehouse - The storage of data in a single location from multiple files.
 
