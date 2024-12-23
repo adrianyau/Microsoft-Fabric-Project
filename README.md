@@ -23,8 +23,9 @@ My project is to test Microsoft Fabric using sample data for uploading, cleaning
 8. Create Power BI Report - The visual analysis displayed for the audience.
 
 ## Results
-
-...
+- 111 brands with 1,160 unique products.
+- Top 5 Brands: Hermanos, Tell Tale, Ebony, Tri-State, and High Top.
+- 833,489 Quantities Sold vs. 8,289 Quantities Returned (0.99% Return Rate) from 1997 to 1998.
 
 ## Challenges
 - Microsoft Power BI in Microsoft Fabric has basic visual tools and filters in comparison to the desktop version of Microsoft Power BI.
